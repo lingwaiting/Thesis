@@ -1,0 +1,87 @@
+# 研究兴趣配置文件
+# 用于 start-my-day skill 从 arXiv 筛选、评分论文
+# 修改 keywords / priority 可调整推荐倾向
+
+# 生成笔记的语言：zh（中文）/ en（English）
+language: "zh"
+
+# Semantic Scholar API Key（可选，用于获取引用数/热门度；留空则跳过）
+semantic_scholar_api_key: ""
+
+# 研究领域：每个领域包含关键词、对应 arXiv 分类、优先级（1-5，越高越重要）
+research_domains:
+  大语言模型:
+    keywords:
+      - "large language model"
+      - "LLM"
+      - "foundation model"
+      - "pre-training"
+      - "transformer"
+      - "instruction tuning"
+      - "RLHF"
+      - "alignment"
+      - "reasoning"
+      - "chain-of-thought"
+      - "in-context learning"
+      - "retrieval-augmented generation"
+      - "RAG"
+      - "long context"
+      - "mixture of experts"
+      - "MoE"
+    arxiv_categories: ["cs.CL", "cs.AI", "cs.LG"]
+    priority: 5
+
+  多模态:
+    keywords:
+      - "multimodal"
+      - "vision-language"
+      - "vision language model"
+      - "VLM"
+      - "image-text"
+      - "visual question answering"
+      - "image captioning"
+      - "CLIP"
+      - "diffusion model"
+      - "text-to-image"
+      - "multimodal large language model"
+      - "MLLM"
+      - "video understanding"
+    arxiv_categories: ["cs.CV", "cs.MM", "cs.CL"]
+    priority: 5
+
+  计算机视觉:
+    keywords:
+      - "object detection"
+      - "image segmentation"
+      - "semantic segmentation"
+      - "image generation"
+      - "video generation"
+      - "self-supervised learning"
+      - "representation learning"
+      - "3D reconstruction"
+      - "neural rendering"
+      - "image recognition"
+    arxiv_categories: ["cs.CV"]
+    priority: 4
+
+  强化学习与智能体:
+    keywords:
+      - "reinforcement learning"
+      - "RL"
+      - "multi-agent"
+      - "LLM agent"
+      - "agentic"
+      - "tool use"
+      - "planning"
+      - "decision making"
+      - "robot learning"
+      - "policy optimization"
+      - "reward model"
+      - "world model"
+    arxiv_categories: ["cs.LG", "cs.MA", "cs.AI", "cs.RO"]
+    priority: 4
+
+# 排除关键词：标题/摘要命中则降权或剔除
+excluded_keywords:
+  - "workshop"
+  - "tutorial"
