@@ -10,17 +10,19 @@ lingknowledge/
 ├── 20_Research/
 │   └── Papers/
 │       ├── 大语言模型/       # LLM 相关论文深度分析
-│       │   ├── AdversaBench/      # LLM 红队测试与安全性
 │       │   ├── MedRLM/            # 医学 LLM
+│       │   ├── AdversaBench.md   # LLM 红队测试
+│       │   ├── AI-PAVE-Br.md     # 电商属性值抽取
+│       │   ├── Two-Stage Transformer.md  # 工业故障诊断
 │       │   └── ...
 │       └── 强化学习与智能体/   # RL & Agent 相关论文深度分析
 │           ├── Contagion_Networks/
 │           ├── Multi-Agent_Multi-Objective/
+│           ├── Decentralized Traffic Management.md
 │           └── ...
 ├── 99_System/
 │   └── Config/
 │       └── research_interests.yaml  # 研究方向配置
-└── 欢迎.md                # Obsidian 起始页
 ```
 
 ## 🔬 研究方向
@@ -35,8 +37,7 @@ lingknowledge/
 ## 🛠 使用方式
 
 1. 克隆仓库后用 [Obsidian](https://obsidian.md/) 打开 `lingknowledge` 文件夹作为 Vault
-2. 建议安装社区插件：~~Calendar~~、~~Dataview~~（按需）
-3. `99_System/Config/research_interests.yaml` 可自定义研究兴趣和关键词
+2. `99_System/Config/research_interests.yaml` 可自定义研究兴趣和关键词
 
 ## 📝 论文笔记规范
 
