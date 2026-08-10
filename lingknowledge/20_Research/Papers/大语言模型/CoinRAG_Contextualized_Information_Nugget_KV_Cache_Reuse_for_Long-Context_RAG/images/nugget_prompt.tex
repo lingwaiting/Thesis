@@ -1,0 +1,31 @@
+\begin{figure*}[h]
+\centering
+\fbox{\parbox{0.98\textwidth}{\small\itshape
+You are an information extraction system for Open-Domain Question Answering.\\
+
+Given a passage, extract all spans that could serve as evidence or direct answers to factual questions.\\
+
+\#\#\# Rules:\\
+1. Extract spans \textbf{\upshape EXACTLY} as they appear in the original text. Do NOT paraphrase, reorder, or modify any words.\\
+2. A span can be any length — a clause, a full sentence, or multiple sentences — as long as it captures a single coherent fact. Choose the \textbf{\upshape minimal} span that makes the fact understandable on its own.\\
+3. Focus on spans containing:\\
+\mbox{}\ \ \ - Named entities with factual context (e.g., birth, death, roles, locations)\\
+\mbox{}\ \ \ - Dates, quantities, measurements, statistics\\
+\mbox{}\ \ \ - Events and actions (who did what, when, where)\\
+\mbox{}\ \ \ - Relationships between entities (e.g., "X is the father of Y")\\
+\mbox{}\ \ \ - Definitions or descriptions of concepts\\
+4. Skip spans that are:\\
+\mbox{}\ \ \ - Purely transitional or connective (e.g., "However, this was not the case.")\\
+\mbox{}\ \ \ - Redundant (already covered by another extracted span)\\
+\mbox{}\ \ \ - Opinions or speculations without factual grounding\\
+5. Spans may partially overlap if they capture different facts.\\
+
+\#\#\# Output Format:\\
+Return a JSON array of strings. Each string must be an exact substring of the original passage.\\
+
+\textbf{\upshape Example:}\\{}
+["Albert Einstein was born on March 14, 1879, in Ulm, Germany.", "the Nobel Prize in Physics in 1921", "his explanation of the photoelectric effect"]
+}}
+\caption{Full system prompt used for GPT-4o-mini nugget extraction. The user content follows the format \texttt{"Passage:$\backslash$n\{passage\}"}.}
+\label{fig:nugget_prompt}
+\end{figure*}

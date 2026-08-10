@@ -1,0 +1,27 @@
+\begin{algorithm}[htbp]
+\caption{Nugget extraction pipeline.}
+\label{alg:nugget}
+\footnotesize
+\begin{algorithmic}[1]
+\Require passage $p$; LLM extractor $\mathcal{E}_{\text{LLM}}$; similarity $\mathrm{sim}$; threshold $\tau$
+\Ensure nugget set $\mathcal{N}(p)$, expressed as token span indices
+\State $\{\tilde{n}_1, \ldots, \tilde{n}_K\} \leftarrow \mathcal{E}_{\text{LLM}}(p)$ \Comment{LLM prompting}
+\State $\mathcal{N}(p) \leftarrow \emptyset$
+\For{$i = 1, \ldots, K$}
+  \If{$\tilde{n}_i \in \mathrm{Sub}(p)$} \Comment{Stage A: exact match}
+    \State $n_i \leftarrow \tilde{n}_i$
+  \Else \Comment{Stage B: fuzzy match}
+    \State $W \leftarrow$ whole-word spans of $p$ near length $|\tilde{n}_i|$
+    \State $s^{\ast} \leftarrow \arg\max_{w \in W} \mathrm{sim}(w, \tilde{n}_i)$
+    \If{$\mathrm{sim}(s^{\ast}, \tilde{n}_i) \geq \tau$}
+      \State $n_i \leftarrow s^{\ast}$
+    \Else
+      \State \textbf{continue} \Comment{Stage C: abandon}
+    \EndIf
+  \EndIf
+  \State $(s_i, e_i) \leftarrow \texttt{find}(n_i, p)$ \Comment{token span}
+  \State $\mathcal{N}(p) \leftarrow \mathcal{N}(p) \cup \{ (n_i, s_i, e_i) \}$
+\EndFor
+\State \Return $\mathcal{N}(p)$
+\end{algorithmic}
+\end{algorithm}

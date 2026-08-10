@@ -1,0 +1,46 @@
+\begin{figure*}[t]
+\centering
+\fbox{
+\parbox{0.98\textwidth}{\small\itshape
+\#\#\# Instruction:\\
+You are an intelligent Open Domain QA system.\\
+You will be given a [Question] and a list of candidate [Clues].\\
+You must determine the correct answer based on your own internal knowledge, using the [Clues] as potential clues.\\
+
+\textbf{\upshape Follow this logic strictly:}\\
+
+\textbf{\upshape 1. Direct Match Priority}\\
+- Examine all [Clues].\\
+- If any clue contains the exact answer (exact span, alias, abbreviation, numerical value, or canonical entity), output it verbatim.\\
+
+\textbf{\upshape 2. Retrieval-Guided Reasoning (Clues-First Inference)}\\
+If no clue contains the exact answer, but:\\
+- a clue includes key entities, partial spans, events, definitions, dates, or semantic cues relevant to the question,\\
+then:\\
+- Use \emph{only} these retrieved cues to infer the correct short answer.\\
+The inference must stay anchored to the retrieved content, not free-form reasoning.\\
+Example:\\
+- If the clue is "The Big Apple" and the question is "Which city … ?", answer "New York City".\\
+
+\textbf{\upshape 3. Minimal Fallback (Only When Retrieval Is Useless)}\\
+- Only if none of the retrieved clues provide helpful information\\
+(no match, no partial cue, no relevant entity),\\
+- Then rely on your internal knowledge to generate the correct short answer.\\
+
+\textbf{\upshape Output Rules}\\
+Output only the short answer.\\
+No explanations.\\
+No reasoning.\\
+Answer should be minimal (entity, number, date, phrase).\\
+
+\#\#\# Input:\\
+\textcolor{blue}{\{\(N\) clues, each prefixed by \texttt{<|doc\_start|>}\}}\\
+Question: \textcolor{blue}{\{question\}}
+}}
+\caption{
+\baseLLM{} answer generation prompt. 
+The instruction block is computed once as the system prefix. 
+The clues (chunks or nuggets) fill the cached K/V slot, and the question is appended. 
+The model is constrained to emit a minimal short answer for lexical token-matching scoring.}
+\label{fig:generation_prompt}
+\end{figure*}
