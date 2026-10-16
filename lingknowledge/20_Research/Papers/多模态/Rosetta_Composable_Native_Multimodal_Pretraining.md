@@ -209,4 +209,4 @@ Rosetta将"核心知识"和"模态能力"解耦：全局共享专家像"操作�
 
 ## 相关论文
 - [[20_Research/Papers/大语言模型/Switch_Transformers|Switch Transformers]] - MoE架构基础
-- [[20_Research/Papers/多模态技术/Transferability_Between_Understanding_and_Generation_in_Unified_Multimodal_Models|Transferability UMM]] - 统一多模态模型中的能力迁移（同月论文，互补视角）
+- [[20_Research/Papers/多模态/Transferability_Between_Understanding_and_Generation_in_Unified_Multimodal_Models|Transferability UMM]] - 统一多模态模型中的能力迁移（同月论文，互补视角）

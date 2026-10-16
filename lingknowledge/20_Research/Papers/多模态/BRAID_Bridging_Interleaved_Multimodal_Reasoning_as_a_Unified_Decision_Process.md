@@ -189,6 +189,6 @@ BRAID的核心洞察是：尽管文本token和图像去噪路径的生成机制�
 ---
 
 ## 相关论文
-- [[20_Research/Papers/多模态技术/Rosetta_Composable_Native_Multimodal_Pretraining|Rosetta]] - 多模态预训练架构创新（同月论文，互补视角：预训练 vs 推理优化）
-- [[20_Research/Papers/多模态技术/Multimodal_Continuous_Reasoning_via_Asymmetric_Mutual_Variational_Learning|AMVL]] - 多模态连续推理（7月论文，不同技术路线）
-- [[20_Research/Papers/多模态技术/Transferability_Between_Understanding_and_Generation_in_Unified_Multimodal_Models|Transferability UMM]] - UMM中理解-生成的迁移特性
+- [[20_Research/Papers/多模态/Rosetta_Composable_Native_Multimodal_Pretraining|Rosetta]] - 多模态预训练架构创新（同月论文，互补视角：预训练 vs 推理优化）
+- [[20_Research/Papers/多模态/Multimodal_Continuous_Reasoning_via_Asymmetric_Mutual_Variational_Learning|AMVL]] - 多模态连续推理（7月论文，不同技术路线）
+- [[20_Research/Papers/多模态/Transferability_Between_Understanding_and_Generation_in_Unified_Multimodal_Models|Transferability UMM]] - UMM中理解-生成的迁移特性

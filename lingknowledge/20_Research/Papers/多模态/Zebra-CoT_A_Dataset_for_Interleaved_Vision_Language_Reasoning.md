@@ -3,10 +3,10 @@ date: "2025-07-22"
 paper_id: "arXiv:2507.16746"
 title: "Zebra-CoT: A Dataset for Interleaved Vision-Language Reasoning"
 authors: "Ang Li, Charles L. Wang, Deqing Fu, Kaiyu Yue, Zikui Cai, Wang Bil Zhu, Olie Liu, Peng Guo, Wilie Neiswanger, Furong Huang, Tom Goldstein, Micah Goldblum"
-domain: "多模态与视觉语言"
+domain: "多模态"
 tags:
   - 论文笔记
-  - 多模态与视觉语言
+  - 多模态
   - Visual-Chain-of-Thought
   - 视觉推理
   - 数据集
