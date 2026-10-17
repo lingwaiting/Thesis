@@ -209,7 +209,7 @@ LLM 智能体将越来越多地在社会结构化环境中行动，其中角色�
 ## 相关论文
 
 ### 直接相关
-- [[Multi-Agent_Multi-Objective/Multi-Agent_Multi-Objective_深度分析|Multi-Agent Multi-Objective]] - 多智能体多目标优化的相关研究
+- [[Multi-Agent_Multi-Objective_A_Multi-Agent_System_for_Multi-Objective_Constrained_Optimization|Multi-Agent Multi-Objective]] - 多智能体多目标优化的相关研究
 
 ## 外部资源
 - 代码和数据未公开发布

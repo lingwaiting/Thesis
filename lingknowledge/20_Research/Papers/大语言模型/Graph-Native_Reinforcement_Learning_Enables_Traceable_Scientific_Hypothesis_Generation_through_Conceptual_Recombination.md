@@ -167,4 +167,4 @@ AI for Science 正在快速发展，LLM 被广泛用于科学假设生成、材�
 ## 相关论文
 - [[TRIAGE]] - 同样使用 GRPO 的角色类型化信用分配
 - [[LLawCo]] - 多智能体合作行为建模
-- [[MedRLM]] - 长上下文临床推理（共享结构化推理的目标）
+- [[MedRLM_Recursive_Multimodal_Health_Intelligence_for_Long-Context_Clinical_Reasoning,_Sensor-Guided_Screening,_Evidence-Grounded_Decision_Support,_and_Community-to-Tertiary_Referral_Optimization]] - 长上下文临床推理（共享结构化推理的目标）
